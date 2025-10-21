@@ -1,34 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sadat — Portfolio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadat's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header>
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <!-- HERO / INTRO -->
+    <section class="hero">
+        <div class="hero-left">
+            <img src="dp.jpg" alt="Sadat" class="profile-img">
+        </div>
+        <div class="hero-right">
+            <h1>Hi, I'm <span id="name">Sadat</span></h1>
+            <p id="greeting"></p>
+        </div>
+    </section>
 
-<main>
-  <section id="hero"></section>
-  <section id="about"></section>
-  <section id="skills"></section>
-  <section id="projects"></section>
-  <section id="achievements"></section>
-  <section id="contact"></section>
-</main>
+    <!-- ABOUT ME -->
+    <section class="about">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate competitive programmer and full-stack developer. I specialize in C++, Python, DSA, and
+            MERN stack development. I enjoy solving challenging problems and participating in coding competitions like
+            Codeforces and ICPC.
+        </p>
+    </section>
 
-<footer>© 2025 Sadat — Designed by Sadat</footer>
+    <!-- SKILLS -->
+    <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <div class="skill">
+                <span>C++</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Python</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 85%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>DSA</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>MERN Stack</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Competitive Programming</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- ACHIEVEMENTS -->
+    <section class="achievements">
+        <h2>Achievements</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">🏆</div>
+                <div class="timeline-content">
+                    <h3>Specialist in Codeforces</h3>
+                    <p>Achieved Codeforces Specialist rating through competitive contests.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">🎖️</div>
+                <div class="timeline-content">
+                    <h3>ICPC Regionalist</h3>
+                    <p>Participated in ICPC regional competitions and reached finalist stage.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">💻</div>
+                <div class="timeline-content">
+                    <h3>Multiple Coding Contest Winner</h3>
+                    <p>Won several online and university-level coding competitions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT / SOCIAL -->
+    <section class="contact">
+        <h2>Contact Me</h2>
+        <div class="socials">
+            <a href="https://github.com/yourusername" target="_blank" class="social-btn">GitHub</a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-btn">LinkedIn</a>
+            <a href="https://codeforces.com/profile/yourusername" target="_blank" class="social-btn">Codeforces</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
