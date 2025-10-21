@@ -1,231 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sadat — Portfolio</title>
-  <meta name="description" content="Sadat — Competitive programmer & software developer. Minimal, dynamic portfolio." />
-
-  <style>
-    :root{
-      --bg:#0b0d10; --card:#0f1114; --muted:#99a0a6; --accent:#4fc3f7; --glass: rgba(255,255,255,0.03);
-      --radius:14px; --maxw:1100px; --mono:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: radial-gradient(1200px 600px at 10% 10%, rgba(79,195,247,0.06), transparent), linear-gradient(180deg,#060708 0%, var(--bg) 100%); color:#e6eef6; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
-      display:flex; align-items:center; justify-content:center; padding:48px 20px;
-    }
-
-    .wrap{width:100%; max-width:var(--maxw);}
-    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px}
-    .brand{display:flex; gap:12px; align-items:center}
-    .logo{width:56px; height:56px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#7ae7ff); display:grid; place-items:center; font-weight:700; color:#021019; font-family:var(--mono); box-shadow: 0 6px 18px rgba(15,17,20,0.6);}
-    .name{font-size:18px; font-weight:600}
-    nav a{color:var(--muted); text-decoration:none; margin-left:18px; font-weight:500}
-    nav a:hover{color:var(--accent)}
-
-    main{display:grid; grid-template-columns: 1fr 420px; gap:28px; align-items:start}
-
-    /* card */
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border-radius:var(--radius); padding:28px; box-shadow: 0 8px 30px rgba(2,4,6,0.7); border:1px solid rgba(255,255,255,0.03)}
-
-    /* HERO */
-    .hero{padding:18px 0}
-    .intro{font-size:28px; line-height:1.05; margin:0 0 12px}
-    .tag{color:var(--muted); margin-bottom:18px}
-    .actions{display:flex; gap:12px}
-    .btn{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:600; color:#e8f7ff}
-    .btn.primary{background:linear-gradient(90deg,var(--accent),#6be6ff); color:#021019; border:none}
-
-    /* animated badges */
-    .badges{display:flex; gap:10px; margin-top:18px}
-    .badge{background:var(--glass); padding:8px 12px; border-radius:999px; font-weight:600; color:var(--muted); display:inline-flex; gap:8px; align-items:center}
-
-    /* PROJECTS / RIGHT COLUMN */
-    .panel{position:relative; overflow:hidden}
-    .floaters{position:absolute; inset:0; pointer-events:none}
-    .floater{width:90px; height:90px; border-radius:16px; opacity:0.06; position:absolute; filter:blur(10px)}
-
-    /* ABOUT */
-    .about p{color:var(--muted); margin:0 0 12px}
-
-    /* SKILLS */
-    .skills{display:flex; flex-direction:column; gap:12px}
-    .skill{display:flex; justify-content:space-between; align-items:center}
-    .skill .label{font-weight:600}
-    .bar{height:8px; background:rgba(255,255,255,0.04); border-radius:8px; width:100%; margin-left:14px; position:relative}
-    .bar > i{position:absolute; left:0; top:0; bottom:0; border-radius:8px}
-    .cp-highlight{display:flex; gap:10px; align-items:center; padding:10px; background:linear-gradient(90deg, rgba(79,195,247,0.06), transparent); border-radius:10px}
-
-    /* CONTACT */
-    .contact form{display:flex; flex-direction:column; gap:10px}
-    input, textarea{background:transparent; border:1px solid rgba(255,255,255,0.06); padding:10px 12px; border-radius:8px; color:inherit}
-    .muted{color:var(--muted)}
-
-    footer{margin-top:28px; text-align:center; color:var(--muted); font-size:13px}
-
-    /* small screens */
-    @media (max-width:900px){main{grid-template-columns:1fr;}
-      .logo{width:48px;height:48px}
-      .intro{font-size:22px}
-    }
-
-    /* motion */
-    .animate-fade{opacity:0; transform:translateY(10px); transition:all 650ms cubic-bezier(.2,.9,.3,1)}
-    .animate-fade.in{opacity:1; transform:none}
-    .type{color:var(--accent); font-weight:700}
-
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sadat — Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">BW</div>
-        <div>
-          <div class="name">Sadat</div>
-          <div class="muted">Competitive Programmer • Software Developer</div>
-        </div>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<header>
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-    <main>
-      <section>
-        <div class="card hero">
-          <h1 class="intro">Hi, I'm <span class="type">Sadat</span> — I build efficient algorithms & polished web apps.</h1>
-          <div class="tag">Competitive programming enthusiast. I enjoy turning problems into elegant code.</div>
+<main>
+  <section id="hero"></section>
+  <section id="about"></section>
+  <section id="skills"></section>
+  <section id="projects"></section>
+  <section id="achievements"></section>
+  <section id="contact"></section>
+</main>
 
-          <div class="actions">
-            <button class="btn primary" onclick="scrollToSection('skills')">View Skills</button>
-            <button class="btn" onclick="scrollToSection('contact')">Get in touch</button>
-          </div>
+<footer>© 2025 Sadat — Designed by Sadat</footer>
 
-          <div class="badges" aria-hidden>
-            <div class="badge">🏆 ICPC-style</div>
-            <div class="badge">⚡ Fast solutions</div>
-            <div class="badge">🧠 DS & Algos</div>
-          </div>
-
-          <div style="margin-top:18px; display:flex; gap:12px; align-items:center">
-            <div class="muted">Highlights:</div>
-            <div class="cp-highlight">
-              <div style="font-weight:700">Competitive Programming</div>
-              <div class="muted">— problem solving, speed, and precision</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card about" id="about" style="margin-top:18px">
-          <h3 style="margin:0 0 8px">About</h3>
-          <p>I am a computer science student and competitive programmer who focuses on neat, correct, and efficient solutions. I love puzzles, algorithmic challenges, and building web tools to simplify workflows.</p>
-          <p class="muted">Tip: edit this about text in the HTML to add your university, contest ratings, or achievements.</p>
-        </div>
-
-      </section>
-
-      <aside class="panel">
-        <div class="card" id="skills">
-          <h3 style="margin:0 0 12px">Skills</h3>
-
-          <div class="skills">
-            <div class="skill"><div class="label">C++</div><div style="flex:1; display:flex; align-items:center"><div class="bar" data-val="95"><i style="width:0%; background:linear-gradient(90deg,var(--accent),#7ae7ff);"></i></div></div></div>
-            <div class="skill"><div class="label">JavaScript</div><div style="flex:1; display:flex; align-items:center"><div class="bar" data-val="85"><i style="width:0%; background:linear-gradient(90deg,#9be2ff,#60c2ff);"></i></div></div></div>
-            <div class="skill"><div class="label">React</div><div style="flex:1; display:flex; align-items:center"><div class="bar" data-val="78"><i style="width:0%; background:linear-gradient(90deg,#bfefff,#6bd6ff);"></i></div></div></div>
-            <div class="skill"><div class="label">Algorithms</div><div style="flex:1; display:flex; align-items:center"><div class="bar" data-val="92"><i style="width:0%; background:linear-gradient(90deg,#dff9ff,#a6efff);"></i></div></div></div>
-          </div>
-
-          <div style="margin-top:14px" class="muted">Competitive programming is highlighted above — replace skill values as you see fit.</div>
-        </div>
-
-        <div class="card" style="margin-top:18px" id="contact">
-          <h3 style="margin:0 0 12px">Contact</h3>
-          <p class="muted">Shoot me an email or connect via GitHub/LinkedIn.</p>
-          <form onsubmit="handleSubmit(event)">
-            <input id="name" placeholder="Your name" required />
-            <input id="email" placeholder="Your email" type="email" required />
-            <textarea id="message" rows="4" placeholder="Short message" required></textarea>
-            <div style="display:flex; gap:10px; margin-top:6px">
-              <button class="btn primary" type="submit">Send</button>
-              <a class="btn" href="mailto:your-email@example.com">Email me</a>
-            </div>
-          </form>
-
-          <div style="margin-top:12px; display:flex; gap:10px">
-            <a class="muted" href="https://github.com/sadat2103108" target="_blank" rel="noreferrer">GitHub</a>
-            <a class="muted" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </div>
-
-        <div class="floaters" aria-hidden>
-          <div class="floater" style="left:-10%; top:5%; width:160px; height:160px; background:linear-gradient(135deg,var(--accent), #7ae7ff);"></div>
-          <div class="floater" style="right:-6%; bottom:5%; width:120px; height:120px; background:linear-gradient(135deg,#6be6ff,#9be2ff);"></div>
-          <div class="floater" style="left:30%; bottom:18%; width:90px; height:90px; background:linear-gradient(135deg,#6ee0ff,#bff3ff);"></div>
-        </div>
-      </aside>
-    </main>
-
-    <footer class="card" style="margin-top:18px">Made with care • Edit this file to personalize. Deployed on GitHub Pages.</footer>
-  </div>
-
-  <script>
-    // small helpers
-    function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});}
-
-    // reveal on load
-    window.addEventListener('load', ()=>{
-      document.querySelectorAll('.animate-fade').forEach(el=>el.classList.add('in'));
-      // animate skill bars
-      document.querySelectorAll('.bar').forEach((bar, idx)=>{
-        const val = parseInt(bar.getAttribute('data-val')||'60',10);
-        setTimeout(()=>{ bar.querySelector('i').style.width = val + '%'; }, 300 + idx*180);
-      });
-    });
-
-    // simple contact form behaviour (frontend-only)
-    function handleSubmit(e){
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if(!name||!email||!message) return alert('Please complete the form');
-      // emulate sending — replace with EmailJS or a backend endpoint for real sending
-      alert('Thanks, '+name+' — your message was recorded (frontend demo). Replace with a real endpoint to enable sending.');
-      e.target.reset();
-    }
-
-    // tiny parallax for floaters
-    window.addEventListener('mousemove', (ev)=>{
-      const els = document.querySelectorAll('.floaters .floater');
-      const cx = window.innerWidth/2, cy = window.innerHeight/2;
-      const dx = (ev.clientX - cx) / cx, dy = (ev.clientY - cy) / cy;
-      els.forEach((el, i)=>{
-        const speed = (i+1)*6;
-        el.style.transform = `translate(${dx*speed}px, ${dy*speed}px) rotate(${dx*10}deg)`;
-      });
-    });
-
-    // tiny typewriter for the intro noun
-    (function typeWriter(){
-      const el = document.querySelector('.intro .type');
-      if(!el) return;
-      const texts = ['Sadat','a Competitive Programmer','a Software Developer'];
-      let t=0, ptr=0, forward=true;
-      const tick = ()=>{
-        const full = texts[t];
-        if(forward){ ptr++; if(ptr>full.length){ forward=false; setTimeout(tick,1200); return; }} else { ptr--; if(ptr<0){ forward=true; t=(t+1)%texts.length; setTimeout(tick,200); return; }}
-        el.textContent = full.slice(0,ptr);
-        setTimeout(tick, forward?70:40);
-      };
-      tick();
-    })();
-
-  </script>
+<script src="script.js"></script>
 </body>
 </html>
