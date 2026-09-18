@@ -95,20 +95,20 @@ export default function ProjectsSection() {
                 style={{ filter: "invert(1)" }}
               />
             </a>
-          </div>
-
-          <p className="more-projects">
-            ...and many more{" "}
-            <a
-              href="https://github.com/sadat2103108"
-              target="_blank"
-              rel="noreferrer"
-            >
-              on GitHub →
-            </a>
-          </p>
-      
+          </div>      
         ))}
+        
+        <p className="more-projects">
+          ...and many more{" "}
+          <a
+            href="https://github.com/sadat2103108"
+            target="_blank"
+            rel="noreferrer"
+          >
+            on GitHub →
+          </a>
+        </p>
+        
       </div>
     </section>
   );
