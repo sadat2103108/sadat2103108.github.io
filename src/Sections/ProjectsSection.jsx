@@ -15,15 +15,15 @@ const projectsData = [
     featured: false,
   },
   {
+    name: "Neural Network From Scratch",
+    description: "Learned, built, and trained a neural network from scratch using raw theory, without tensorflow or pytorch.",
+    html_url: "https://github.com/sadat2103108/neural_network_theories",
+    featured: true,
+  },
+  {
     name: "Routine Planner",
     description: "Plan your daily routine efficiently.",
     html_url: "https://github.com/sadat2103108/RoutinePlanner_CSE3100",
-    featured: false,
-  },
-  {
-    name: "Tic-Tac-Toe Minimax",
-    description: "Tic-Tac-Toe AI using Minimax algorithm.",
-    html_url: "https://github.com/sadat2103108/tic-tac-toe-minimax-algo",
     featured: false,
   },
   {
