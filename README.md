@@ -19,5 +19,5 @@ npm install
 npm start
 
 ## Contact
-Email: shameemsadat00@example.com
+Email: shameemsadat00@gmail.com
 GitHub: https://github.com/sadat2103108
