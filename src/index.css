@@ -242,6 +242,23 @@ body {
 }
 
 
+.more-projects {
+  text-align: center;
+  margin-top: 30px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.more-projects a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.more-projects a:hover {
+  text-decoration: underline;
+}
+
+
 /* ---------- Competitive Programming (Timeline + CF) ---------- */
 .cp-container {
   display: flex;
