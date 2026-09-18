@@ -4,7 +4,7 @@ import React from "react";
 const projectsData = [
   {
     name: "Space Invader Game",
-    description: "Classic Space Invader game in JavaScript.",
+    description: "Classic Space Invader game in python-pygame. My first ever project",
     html_url: "https://github.com/sadat2103108/Space-Invader-Game-CSE2100",
     featured: true,
   },
@@ -28,7 +28,7 @@ const projectsData = [
   },
   {
     name: "Genetic Algorithm Visualizer",
-    description: "Visualize genetic algorithms with JS animations.",
+    description: "Implementation and visualization of the genetic algorithms.",
     html_url: "https://github.com/sadat2103108/visualize-genetic-algorithm",
     featured: false,
   },
@@ -96,6 +96,18 @@ export default function ProjectsSection() {
               />
             </a>
           </div>
+
+          <p className="more-projects">
+            ...and many more{" "}
+            <a
+              href="https://github.com/sadat2103108"
+              target="_blank"
+              rel="noreferrer"
+            >
+              on GitHub →
+            </a>
+          </p>
+      
         ))}
       </div>
     </section>
